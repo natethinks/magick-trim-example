@@ -1,18 +1,13 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/gographics/imagick/imagick"
 	"github.com/olahol/go-imageupload"
 )
 
 func main() {
-	go server()
-
-	forever := make(chan bool)
-	<-forever
+	server()
 }
 
 func server() {
@@ -46,5 +41,4 @@ func server() {
 	})
 
 	r.Run(":5000")
-
 }
